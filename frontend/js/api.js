@@ -1,5 +1,5 @@
 // Use localhost for development
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://taskmaster-backend-yoza.onrender.com/api';
 
 // Make it globally available
 window.API_URL = API_URL;
