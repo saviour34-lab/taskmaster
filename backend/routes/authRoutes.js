@@ -3,6 +3,7 @@ const router = express.Router();
 const { body } = require('express-validator');
 const { register, login } = require('../controllers/authController');
 
+// Register route
 router.post(
   '/register',
   [
@@ -21,6 +22,7 @@ router.post(
   register
 );
 
+// Login route
 router.post(
   '/login',
   [

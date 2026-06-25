@@ -11,14 +11,19 @@ const {
   searchTasks
 } = require('../controllers/taskController');
 
+// All routes require authentication
 router.use(protect);
 
+// Search route (must come before /:id)
 router.get('/search', searchTasks);
 
+// Get all tasks
 router.get('/', getTasks);
 
+// Get single task
 router.get('/:id', getTaskById);
 
+// Create task
 router.post(
   '/',
   [
@@ -47,6 +52,7 @@ router.post(
   createTask
 );
 
+// Update task
 router.put(
   '/:id',
   [
@@ -76,6 +82,7 @@ router.put(
   updateTask
 );
 
+// Delete task
 router.delete('/:id', deleteTask);
 
 module.exports = router;
